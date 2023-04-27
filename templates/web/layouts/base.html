@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/sidebar.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'web/Assets/Images/logo.svg' %}">
+    <script src="https://kit.fontawesome.com/0d5a0a2089.js" crossorigin="anonymous"></script>
+
+    {% block links %}
+
+    {% endblock %}
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+
+    {% include '../includes/navbar.html' %}
+
+    <div class="main-body">
+        {% include '../includes/sidebar.html' %}
+        <div class="main-dashboard">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+<script src="{% static 'web/Assets/JS/common.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+
+</html>

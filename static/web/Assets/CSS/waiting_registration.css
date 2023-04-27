@@ -1,0 +1,309 @@
+.main-body {
+    display: flex;
+    position: relative;
+}
+
+.main-dashboard {
+    padding: 15px 30px;
+    width: calc(100vw - 240px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #FCFCFC;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.row1 > h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #05ACBC;
+    margin-bottom: 0;
+}
+
+.search-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 323px;
+    height: 45px;
+}
+
+.search-user > input {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border-radius: 100px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.search-user > input:focus {
+    outline-color: #05ACBC;
+}
+
+.search-user > input::placeholder {
+    color: #C4C4C4;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+}
+
+.sort-by-container {
+    width: 233px;
+    height: 45px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.sort-by-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.sort-by-header span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #C4C4C4;
+}
+
+.sort-by-dropdown-container {
+    position: absolute;
+    left: 0px;
+    top: 48px;
+    width: 233px;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+}
+
+.sort-by-dropdown-container .form-check {
+    min-height: unset;
+    height: 18px;
+    margin-bottom: 0px;
+}
+
+.sort-by-dropdown-container .form-check .form-check-input {
+    border-radius: 5px;
+    border-color: #05ACBC;
+    box-shadow: none;
+}
+
+.sort-by-dropdown-container .form-check .form-check-input:checked {
+    background-color: #05ACBC;
+}
+
+.sort-by-dropdown-container .form-check .form-check-label {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #05ACBC;
+}
+
+/* .options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.options span {
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1rem;
+    color: #05ACBC;
+}
+
+.options input {
+    border: 1px solid #05ACBC;
+    accent-color: #05ACBC;
+} */
+
+.waiting-registration-table-wrapper {
+    background: #FFFFFF;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+}
+
+.waiting-registration-table {
+    width: 100%;
+    border-spacing: 0;
+    min-width: 800px;
+}
+
+.waiting-registration-table thead {
+    background-color: #FCFCFC;
+    box-shadow: 0px 0px 4px rgba(208, 209, 215, 0.5);
+    border-style: solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    height: 65px;
+}
+
+.waiting-registration-table tbody {
+    border-color: transparent;
+    /* border-width: 2px; */
+}
+
+.waiting-registration-table thead tr {
+    text-align: center;
+}
+
+
+.waiting-registration-table thead tr th:first-of-type {
+    border-left-style: solid;
+    border-top-left-radius: 10px;
+    /* padding-left: 5%; */
+    text-align: center;
+}
+
+.waiting-registration-table thead tr th:last-of-type {
+    border-right-style: solid;
+    border-top-right-radius: 10px;
+    text-align: center;
+    /* padding-right: 5%; */
+}
+
+.waiting-registration-table tbody tr {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(208, 209, 215, 0.5);
+    height: 65px;
+    text-align: center;
+}
+
+.waiting-registration-table tbody > tr:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+/* .waiting-registration-table tbody > tr:hover {
+    outline: 1px solid #05ACBC;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+.waiting-registration-table tbody tr td {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color:#292941;
+    font-weight: 500;
+}
+
+/* .waiting-registration-table tbody tr td:first-of-type {
+    text-align: left;
+    padding-left: 2%;
+} */
+
+.waiting-registration-table tbody tr td:last-of-type {
+    /* text-align: right;
+    padding-right: 14%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    gap: 10px;
+}
+
+.waiting-registration-table tbody tr td img {
+    width: 40px;
+    height: 40px;
+}
+
+.table-toggle {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #05ACBC;
+    border-color: #05ACBC;
+    box-shadow: none;
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-color: #818A99;
+    border-color: transparent;
+    box-shadow: none;
+} 
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.pagination-container > div {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #8A8CA9;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pagination-container .total-pages {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.pagination-container .current-page {
+    border: 1px solid #05ACBC;
+    color: #05ACBC;
+}
+
+.pagination-container .single-right {
+    border: 1px solid #05ACBC;
+}
+
+.pagination-container .single-right path {
+    fill: #05ACBC;
+}

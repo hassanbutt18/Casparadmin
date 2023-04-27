@@ -1,0 +1,75 @@
+.main-body {
+    display: flex;
+}
+
+.main-dashboard {
+    padding: 20px 30px;
+    width: calc(100vw - 240px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #FCFCFC;
+}
+
+.main-dashboard > h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #05ACBC;
+    margin-bottom: 0;
+}
+
+.add-notification-wrapper {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.add-notification-wrapper > h2 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    color: #292941;
+    margin-bottom: 20px;
+}
+
+.add-notification-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-notification-wrapper > form > input {
+    width: 365px;
+    height: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.add-notification-wrapper > form > input:focus {
+    outline-color: #05ACBC;
+}
+
+.add-notification-wrapper > form > button {
+    width: 245px;
+    height: 40px;
+    background-color: #05ACBC;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+form > input::placeholder {
+    color: #c4c4c4;
+}

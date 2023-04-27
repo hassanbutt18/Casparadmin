@@ -1,0 +1,101 @@
+#editUser .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 781px;
+}
+
+#editUser .modal-body {
+    padding: 0 30px;
+}
+
+.user-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-modal-user-img {
+    width: 179px;
+    height: 179px;
+}
+
+.user-img span {
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+    color: #292941;
+}
+
+.edit-user-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.edit-input {
+    text-align: left;
+    width: 279px;
+}
+
+.edit-input > span {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1rem;
+    color: #292941;
+}
+
+.edit-input > div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.edit-input > div > input {
+    background-color: #FFFFFF;
+    height: 40px;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 40px;
+    color: #292941;
+}
+
+.edit-input > div > input::placeholder {
+    color: #c4c4c4;
+}
+
+.edit-input > div > input:focus {
+    outline-color: #05ACBC;
+}
+
+.edit-input > div > svg {
+    position: absolute;
+    right: 15px;
+}
+
+.edit-user-modal-btn {
+    background: #05ACBC;
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}

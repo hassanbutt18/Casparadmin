@@ -1,0 +1,29 @@
+<div class="modal fade" id="edit-username" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="editUsernameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-end pb-0">
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center pt-0">
+                <h3>Edit Username</h3>
+                <form action="" class="w-100" onsubmit="editUsernameForm(event);">
+                    <div class="alert hide">
+                        <span class="closebtn" onclick="this.parentElement.classList.add('hide');">&times;</span>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-body">
+                            <input type="text" class="w-100 mb-4" placeholder="jane_oleson" name="username" id="" required />
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center gap-3">
+                        <button type="button" class="cancel-btn" id="closeEditUsernameModal"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="submit-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" class="edit-username" data-bs-toggle="modal" data-bs-target="#edit-username" />

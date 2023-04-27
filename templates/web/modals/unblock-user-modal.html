@@ -1,0 +1,59 @@
+<div class="modal fade" id="unblock-user-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-end pb-0">
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center pt-0">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4830_319)">
+                        <path
+                            d="M26 0C11.6581 0 0 11.6581 0 26C0 40.3419 11.6581 52 26 52C40.3419 52 52 40.3419 52 26C52 11.6581 40.3419 0 26 0Z"
+                            fill="url(#paint0_linear_4830_319)" />
+                        <path
+                            d="M26.9953 11.5303C25.3382 11.5325 23.7495 12.1916 22.5776 13.3632C21.4056 14.5347 20.7459 16.1232 20.7432 17.7803V22.596C20.7432 22.8749 20.8539 23.1424 21.0511 23.3396C21.2483 23.5367 21.5158 23.6475 21.7946 23.6475C22.0735 23.6475 22.341 23.5367 22.5382 23.3396C22.7354 23.1424 22.8461 22.8749 22.8461 22.596V17.7803C22.8461 15.4671 24.6799 13.6332 26.9953 13.6332H27.1087C29.4241 13.6332 31.2579 15.465 31.2579 17.7803C31.2579 18.0592 31.3686 18.3265 31.5658 18.5237C31.763 18.7209 32.0305 18.8318 32.3093 18.8318C32.5882 18.8318 32.8557 18.7209 33.0529 18.5237C33.2501 18.3265 33.3608 18.0592 33.3608 17.7803C33.358 16.1232 32.6983 14.5347 31.5264 13.3632C30.3544 12.1916 28.7658 11.5325 27.1087 11.5303H26.9953Z"
+                            fill="#292941" />
+                        <path
+                            d="M27.0521 38.6179C32.2785 38.6179 36.5153 34.381 36.5153 29.1546C36.5153 23.9282 32.2785 19.6914 27.0521 19.6914C21.8257 19.6914 17.5889 23.9282 17.5889 29.1546C17.5889 34.381 21.8257 38.6179 27.0521 38.6179Z"
+                            fill="url(#paint1_linear_4830_319)" />
+                        <path
+                            d="M27.0518 26.003C26.6351 26.001 26.2271 26.1232 25.8801 26.3539C25.533 26.5847 25.2625 26.9135 25.103 27.2986C24.9436 27.6836 24.9024 28.1074 24.9847 28.516C25.067 28.9246 25.269 29.2994 25.5651 29.5927C25.6892 29.7189 25.8468 29.7946 26.0003 29.885V33.1088C26.0003 33.3877 26.1112 33.6551 26.3084 33.8523C26.5056 34.0495 26.773 34.1603 27.0518 34.1603C27.3307 34.1603 27.5982 34.0495 27.7954 33.8523C27.9926 33.6551 28.1033 33.3877 28.1033 33.1088V29.885C28.2547 29.7946 28.4146 29.7167 28.5387 29.5927C28.8347 29.2994 29.0368 28.9246 29.1191 28.516C29.2014 28.1074 29.1601 27.6836 29.0006 27.2986C28.8411 26.9135 28.5706 26.5847 28.2236 26.3539C27.8765 26.1232 27.4686 26.001 27.0518 26.003Z"
+                            fill="#292941" />
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_4830_319" x1="26" y1="0" x2="26" y2="52"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#05ACBC" />
+                            <stop offset="1" stop-color="#68B76C" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_4830_319" x1="17.5889" y1="29.1546" x2="36.5153" y2="29.1546"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" />
+                        </linearGradient>
+                        <clipPath id="clip0_4830_319">
+                            <rect width="52" height="52" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <form action="" class="align-items-center w-100">
+                    <div class="alert hide">
+                        <span class="closebtn" onclick="this.parentElement.classList.add('hide');">&times;</span>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="mb-3 w-100 text-center">
+                        <h3>Unblock</h3>
+                        <p class="unblock-warning">Are you sure you want to unblock this user?
+                        </p>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center gap-4">
+                        <button type="button" class="cancel-btn" id="closeDeleteDeviceModal"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="submit-btn">Ok</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" class="unblock-user" data-bs-toggle="modal" data-bs-target="#unblock-user-modal" />

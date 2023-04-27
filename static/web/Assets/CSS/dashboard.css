@@ -1,0 +1,176 @@
+.main-body {
+    display: flex;
+}
+
+.main-dashboard {
+    min-width: 1100px;
+    overflow-x: auto;
+    padding: 15px 30px;
+    width: calc(100vw - 240px);
+    display: flex;
+    gap: 30px;
+    background-color: #FCFCFC;
+}
+
+.column1 {
+    width: 59%
+}
+
+.column2 {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.column1 h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #05ACBC;
+}
+
+.column1 > h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #8A8CA9;
+}
+
+.column1-stats {
+    margin-bottom: 20px;
+}
+
+.column1-stats h2 {
+    color: #05ACBC;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.stat-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    height: 100px;
+    width: 290px;
+    padding: 0 15px;
+}
+
+.stat-values {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-values > span:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3rem;
+    color: #292941;
+}
+
+.stat-values > span:last-of-type {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    color: #8A8CA9;
+}
+
+.chart1-wrapper {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    padding: 30px;
+    height: 430px;
+    border-radius: 10px;
+}
+
+.column2 h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #05ACBC;
+    margin-top: 0;
+}
+
+.column2 > div:first-of-type {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.column2 > div:last-of-type {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    padding: 30px;
+    /* height: 430px; */
+    border-radius: 10px;
+}
+
+#chart1 {
+    height: 100%;
+}
+
+.chart1-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart1-header > div {
+    display: flex;
+    gap: 15px;
+}
+
+.chart1-header .header-heading > span {
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1rem;
+}
+
+.chart1-header > div:first-of-type .header-heading:first-of-type > span,
+.chart1-header > div:last-of-type .header-heading:first-of-type > span {
+    color: #05ACBC;
+}
+
+.chart1-header > div:first-of-type .header-heading:nth-of-type(even) > span,
+.chart1-header > div:last-of-type .header-heading:last-of-type > span {
+    color: #83BA42;
+}
+
+.chart1-header > div:first-of-type .header-heading:last-of-type > span {
+    color: #8A8CA9;
+}
+
+.chart3-wrapper {
+    width: 100%;
+    height: 300px;
+}
+
+.chart3-wrapper > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.canvasjs-chart-canvas {
+    height: fit-content!important;
+    position: static!important;
+}
+
+.canvasjs-chart-container > canvas:last-of-type{
+    position:absolute!important;
+}

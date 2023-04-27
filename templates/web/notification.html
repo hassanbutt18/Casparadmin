@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% extends './layouts/base.html' %}
+    {% load static %}
+
+    {% block links %}
+
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/notification.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/notification_modal.css' %}">
+
+    {% endblock %}
+
+    <title>{% block title %}Admin Notification{% endblock %}</title>
+</head>
+
+<body>
+    {% block body %}
+
+    <h1>Notification</h1>
+    <div class="add-notification-wrapper">
+        <h2>General Notification</h2>
+        <form action="">
+            <input type="text" name="title" required placeholder="Title">
+            <input type="text" name="description" required placeholder="Description">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#sendNotification">Send</button>
+        </form>
+    </div>
+
+    <!-- Notification Modal -->
+    {% include './modals/notification-modal.html' %}
+
+    {% endblock %}
+</body>
+
+</html>

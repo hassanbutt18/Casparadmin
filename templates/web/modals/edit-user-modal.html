@@ -1,0 +1,180 @@
+{% load static %}
+<div class="modal fade" id="editUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="editUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <form action="" onsubmit="editUserForm(event);">
+                <!-- {% csrf_token %} -->
+                <div class="modal-header border-bottom-0 w-100 justify-content-end pb-0">
+                    <!-- <h5 class="modal-title" style="color: #004762;" id="staticBackdropLabel">Remove Organisation</h5> -->
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    <svg class="cursor-pointer" data-bs-dismiss="modal" aria-label="Close" width="30" height="31"
+                        viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_295_2457)">
+                            <path
+                                d="M15 2.99414C8.0875 2.99414 2.5 8.58164 2.5 15.4941C2.5 22.4066 8.0875 27.9941 15 27.9941C21.9125 27.9941 27.5 22.4066 27.5 15.4941C27.5 8.58164 21.9125 2.99414 15 2.99414ZM21.25 19.9816L19.4875 21.7441L15 17.2566L10.5125 21.7441L8.75 19.9816L13.2375 15.4941L8.75 11.0066L10.5125 9.24414L15 13.7316L19.4875 9.24414L21.25 11.0066L16.7625 15.4941L21.25 19.9816Z"
+                                fill="#FB3B3B" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_295_2457">
+                                <rect width="30" height="30" fill="white" transform="translate(0 0.494141)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="user-img">
+                        <img src="{% static 'web/Assets/Images/user.svg' %}" class="edit-modal-user-img" alt="">
+                        <span>Jenny</span>
+                    </div>
+                    <div class="edit-user-input-container">
+                        <div class="input-row">
+                            <div class="edit-input">
+                                <span>Name</span>
+                                <div>
+                                    <input type="text" name="name" id="name" placeholder="Jenny" value="Jenny" readonly />
+                                    <svg onclick="openNameModal(event);" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="edit-input">
+                                <span>User Name</span>
+                                <div>
+                                    <input type="text" name="username" id="username" placeholder="jane_oleson" value="jane_oleson" readonly />
+                                    <svg onclick="openUsernameModal(event);" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="edit-input">
+                                <span>Email Address</span>
+                                <div>
+                                    <input type="email" name="email" id="email" placeholder="jenny@gmail.com" value="jenny@gmail.com" readonly />
+                                    <svg onclick="openEmailModal(event);" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="edit-input">
+                                <span>Gender</span>
+                                <div>
+                                    <input type="text" name="gender" id="gender" placeholder="Male" value="Male" readonly />
+                                    <svg onclick="openGenderModal(event);" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="edit-input">
+                                <span>Date of birth</span>
+                                <div>
+                                    <input type="text" name="dob" id="dob" value="16-01-1997" placeholder="16-01-1997" readonly />
+                                    <svg onclick="openDOBModal(event);" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="edit-input">
+                                <span>Country</span>
+                                <div>
+                                    <input type="text" name="country" id="country" value="Pakistan" placeholder="France" readonly />
+                                    <svg onclick="openCountryModal(event);" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="edit-input">
+                                <span>Interest</span>
+                                <div>
+                                    <input type="text" name="interest" id="interest" placeholder="Books, Music and Sports" readonly />
+                                    <svg onclick="openInterestModal(event);" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="edit-input">
+                                <span>Subjects</span>
+                                <div>
+                                    <input type="text" name="topic" id="topic" placeholder="Economics, IT and Art" readonly />
+                                    <svg onclick="openTopicModal(event);" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="edit-input">
+                                <span>Native Language</span>
+                                <div>
+                                    <input type="text" name="language" id="language" value="Arabic" placeholder="Arabic" readonly />
+                                    <svg onclick="openLanguageModal(event);" width="22" height="22"
+                                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="edit-input">
+                                <span>App Language</span>
+                                <div>
+                                    <input type="text" name="app_language" id="app-language" value="English" placeholder="English" readonly />
+                                    <svg onclick="openAppLanguageModal(event);" width="22"
+                                        height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" rx="11" fill="#05ACBC" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.9546 9.60778C14.0502 9.70338 14.0501 9.85838 13.9545 9.95395L8.91897 14.987C8.71898 15.1896 8.45809 15.321 8.17626 15.3611L6.71071 15.5808C6.68555 15.5846 6.65997 15.5846 6.63481 15.5808C6.495 15.5599 6.39865 15.4295 6.41961 15.2897L6.63934 13.8242C6.67664 13.5443 6.80304 13.2839 6.99985 13.0815L12.041 8.04031C12.1365 7.94473 12.2915 7.94473 12.3871 8.04031L13.9546 9.60778ZM13.4647 6.61385C13.7307 6.35137 14.1583 6.35137 14.4243 6.61385L15.3865 7.57612C15.649 7.84213 15.649 8.2697 15.3865 8.53569L15.0308 8.89039C14.9352 8.98575 14.7804 8.98564 14.685 8.89015L13.1103 7.31544C13.0148 7.21996 13.0147 7.06518 13.11 6.96956L13.4647 6.61385Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 justify-content-center">
+                    <button class="edit-user-modal-btn" type="submit">Save
+                        Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

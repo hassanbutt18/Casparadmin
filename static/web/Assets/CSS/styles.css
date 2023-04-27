@@ -1,0 +1,81 @@
+@import url("https://v1.fontapi.ir/css/SFUIDisplay");
+
+html,
+body {
+    font-family: "SF UI Display", sans-serif;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.show-flex {
+    display: flex !important;
+}
+
+.modal-backdrop.show {
+    z-index: 1060!important;
+}
+
+.modal-backdrop.show ~ .modal-backdrop.show {
+    z-index: 1062!important;
+}
+
+.modal.show {
+    z-index: 1061!important;
+}
+
+.modal.show ~ .modal.show {
+    z-index: 1063!important;
+}
+
+.input-error-msg {
+    color: #dc3545;
+    opacity: 0;
+    position: absolute;
+    left: 110vw;
+}
+
+.input-error-msg.active {
+    opacity: 1;
+    margin-bottom: 5px;
+    transition: ease .3s;
+    position: static;
+}
+
+.input-error {
+    border-width: 2px!important;
+    border-color: #dc3545!important;
+}
+
+.input-error:focus-visible {
+    border-color: #dc3545!important;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #05acbc;
+    width: 4px;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #058692;
+}

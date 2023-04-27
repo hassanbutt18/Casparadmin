@@ -1,0 +1,81 @@
+<aside class="sidebar">
+    <div class="sidebar-link-container">
+        <a href="{% url 'dashboard' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'dashboard' %}active{% endif %}">
+                    Dashboard
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'domain' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'domain' %}active{% endif %}">
+                    Domain
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'notification' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'notification' %}active{% endif %}">
+                    Notification
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'register_user' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'register_user' %}active{% endif %}">
+                    Register Users
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'waiting_registration' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'waiting_registration' %}active{% endif %}">
+                    Waiting Registration
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'add_info' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'add_info' %}active{% endif %}">
+                    Add Information
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'blocked_user' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'blocked_user' %}active{% endif %}">
+                    Blocked Users
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'reported_user' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'reported_user' %}active{% endif %}">
+                    Reported Users
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'active_capsule' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'active_capsule' %}active{% endif %}">
+                    Active Capsules
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'waiting_list' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'waiting_list' %}active{% endif %}">
+                    Waiting List
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'profile_setting' %}">
+            <div class="link-wrapper">
+                <div class="sidebar-link {% if active_page == 'profile' %}active{% endif %}">
+                    Profile Setting
+                </div>
+            </div>
+        </a>
+    </div>
+</aside>

@@ -1,0 +1,66 @@
+#alert-user-modal .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#alert-user-modal .modal-content .modal-body h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #FC0909;
+}
+
+#alert-user-modal .alert-notification {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#alert-user-modal .alert-notification .heading {
+    width: 365px;
+}
+
+#alert-user-modal .alert-notification .heading h4 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    color: #292941;
+    margin-bottom: 0;
+}
+
+#alert-user-modal .alert-notification input {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 365px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+#alert-user-modal .alert-notification input:focus {
+    outline-color: #05ACBC;
+}
+
+#alert-user-modal .alert-notification input::placeholder {
+    color: #c4c4c4;
+}
+
+#alert-user-modal .submit-btn {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    background-color: #05ACBC;
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+}

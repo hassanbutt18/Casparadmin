@@ -1,0 +1,41 @@
+<div class="modal fade" id="del-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-end pb-0">
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center pt-0">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="52" height="52" rx="26" fill="url(#paint0_linear_4709_6685)" />
+                    <path
+                        d="M15.9715 37.1432C15.9715 38.9818 17.4758 40.4861 19.3143 40.4861H32.6858C34.5243 40.4861 36.0286 38.9818 36.0286 37.1432V20.429C36.0286 18.5904 34.5243 17.0861 32.6858 17.0861H19.3143C17.4758 17.0861 15.9715 18.5904 15.9715 20.429V37.1432ZM36.0286 12.0718H31.85L30.6633 10.8851C30.3625 10.5842 29.9279 10.4004 29.4933 10.4004H22.5068C22.0722 10.4004 21.6376 10.5842 21.3368 10.8851L20.15 12.0718H15.9715C15.0522 12.0718 14.3 12.824 14.3 13.7432C14.3 14.6625 15.0522 15.4147 15.9715 15.4147H36.0286C36.9479 15.4147 37.7 14.6625 37.7 13.7432C37.7 12.824 36.9479 12.0718 36.0286 12.0718Z"
+                        fill="white" />
+                    <defs>
+                        <linearGradient id="paint0_linear_4709_6685" x1="26" y1="0" x2="26" y2="68"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF3B30" />
+                            <stop offset="1" stop-color="#292941" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <form action="" class="align-items-center w-100">
+                    <div class="alert hide">
+                        <span class="closebtn" onclick="this.parentElement.classList.add('hide');">&times;</span>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="mb-3 w-100 text-center">
+                        <h3>Delete</h3>
+                        <p class="del-warning">Are you sure? You want to delete this user
+                        </p>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center gap-4">
+                        <button type="button" class="cancel-btn" id="closeDeleteDeviceModal"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="submit-btn">Ok</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,196 @@
+#edit-dob .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 600px;
+}
+
+#edit-dob h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #292941;
+}
+
+#edit-dob form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-dob .calendar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 8px 0px 0px 8px;
+}
+
+#edit-dob #custom-calendar {
+    background-color: #FFFFFF;
+    width: 65%;
+}
+
+.jsCalendar table {
+    margin: 0!important;
+    width: 100%;
+    box-shadow: none!important;
+}
+
+.jsCalendar-title-row {
+    display: flex;
+}
+
+.jsCalendar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.jsCalendar-title-left,
+.jsCalendar-title-right {
+    background-color: #FFFFFF;
+    border: 1px solid #05ACBC;
+    border-radius: 8px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jsCalendar-title-left:hover,
+.jsCalendar-title-right:hover {
+    background-color: #05ACBC;
+    cursor: pointer;
+}
+
+.jsCalendar-title-left:hover .jsCalendar-nav-left,
+.jsCalendar-title-right:hover .jsCalendar-nav-right {
+    color: #FFFFFF!important;
+}
+
+.jsCalendar-nav-left,
+.jsCalendar-nav-right {
+    color: #05ACBC!important;
+    margin: unset!important;
+    height: 100%!important;
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jsCalendar thead .jsCalendar-nav-left:after,
+.jsCalendar thead .jsCalendar-nav-right:after {
+    vertical-align: sub;
+}
+
+.jsCalendar-nav-right:hover,
+.jsCalendar-nav-left:hover {
+    background-color: unset!important;
+}
+
+.jsCalendar-title-name {
+    font-weight: 700!important;
+    font-size: 1.25rem!important;
+    line-height: 1.5rem;
+    color: #292941;
+}
+
+.jsCalendar-week-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jsCalendar-current {
+    background-color: #05ACBC!important;
+    border: 1px solid transparent!important;
+    border-radius: 8px!important;
+}
+
+.jsCalendar tbody td:hover {
+    /* border: 1px solid transparent!important; */
+    border-radius: 8px!important;
+}
+
+#edit-dob #custom-calendar tbody > tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+#custom-calendar th,
+#custom-calendar td {
+    font-size: 1rem;
+}
+
+.selected-date {
+    background-color: #05ACBC;
+}
+
+#edit-dob .view-date-container {
+    width: 35%;
+}
+
+#edit-dob .view-date-container .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-dob .view-date-container > .heading > span {
+    font-weight: 700!important;
+    font-size: 1.25rem!important;
+    line-height: 1.5rem;
+    color: #292941;
+}
+
+#edit-dob .view-date-container > .view-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 30px;
+}
+
+#edit-dob .view-date-container > .view-date > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 700!important;
+    font-size: 1.25rem!important;
+    line-height: 1.5rem;
+    color: #292941;
+    height: 60px;
+    border-width: 0.5px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: #8B8B8B;
+}
+
+#edit-dob .cancel-btn,
+#edit-dob .submit-btn {
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+#edit-dob .cancel-btn {
+    background-color: #FF3B30;
+}
+
+#edit-dob .submit-btn {
+    background-color: #05ACBC;
+}

@@ -1,0 +1,143 @@
+#edit-gender .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#edit-gender h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #292941;
+}
+
+#edit-gender form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-gender .input-container {
+    width: 365px;
+}
+
+#edit-gender .input-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+#edit-gender h4 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.2rem;
+    color: #292941;
+}
+
+#edit-gender .input-body > input {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline-color: #05ACBC;
+}
+
+#edit-gender .input-body > input::placeholder {
+    color: #c4c4c4;
+}
+
+#edit-gender .gender-choice-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#edit-gender .gender-choice-container > input {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 122px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.show-selected-gender {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+
+#edit-gender .cancel-btn,
+#edit-gender .submit-btn {
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+#edit-gender .cancel-btn {
+    background-color: #FF3B30;
+}
+
+#edit-gender .submit-btn {
+    background-color: #05ACBC;
+}
+
+
+
+input[name="select_gender"] {
+    display: none;
+}
+
+.gender-radio-btn .radio-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 122px;
+    height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+input[name="select_gender"]:checked+.radio-label {
+    border: 1px solid #05ACBC;
+}
+
+
+.gender-radio-btn {
+    position: relative;
+    width: 122px;
+    height: 35px;
+}

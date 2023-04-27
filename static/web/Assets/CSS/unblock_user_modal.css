@@ -1,0 +1,52 @@
+#unblock-user-modal .modal-content {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    width: 700px;
+}
+
+#unblock-user-modal .modal-content .modal-body h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #292941;
+    margin-top: 20px;
+}
+
+#unblock-user-modal .unblock-warning {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #8A8CA9;
+}
+
+#unblock-user-modal .cancel-btn {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    background-color: #FF3B30;
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+}
+
+#unblock-user-modal .submit-btn {
+    background-color: #05ACBC;
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-weight: 700;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    width: 170px;
+    height: 40px;
+}

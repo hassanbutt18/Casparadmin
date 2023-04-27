@@ -1,0 +1,74 @@
+#edit-email .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#edit-email h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #292941;
+}
+
+#edit-email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-email .input-container {
+    width: 365px;
+}
+
+#edit-email .input-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+#edit-email h4 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.2rem;
+    color: #292941;
+}
+
+#edit-email .input-body input {
+    width: 100%;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#edit-email .input-body input:focus {
+    outline-color: #05ACBC;
+}
+
+#edit-email .cancel-btn,
+#edit-email .submit-btn {
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+#edit-email .cancel-btn {
+    background-color: #FF3B30;
+}
+
+#edit-email .submit-btn {
+    background-color: #05ACBC;
+}

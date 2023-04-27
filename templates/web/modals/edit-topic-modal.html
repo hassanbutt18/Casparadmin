@@ -1,0 +1,72 @@
+<div class="modal fade" id="edit-topic" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="editTopicLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-end pb-0">
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center pt-0">
+                <h3>Edit Topics</h3>
+                <form action="" class="w-100" onsubmit="editTopicForm(event);">
+                    <div class="alert hide">
+                        <span class="closebtn" onclick="this.parentElement.classList.add('hide');">&times;</span>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-body">
+                            <h4>Topics (Select any three)</h4>
+                            <span class="current-topic"></span>
+                        </div>
+                    </div>
+                    <div class="topic-choice-container">
+                        <div class="topic-choice">
+                            <input type="checkbox" id="topic-checkbox1" name="Economics" class="topic-checkbox-group">
+                            <label for="topic-checkbox1">
+                                <div class="choice-text">
+                                    <span>Economics</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="topic-choice">
+                            <input type="checkbox" id="topic-checkbox2" name="IT" class="topic-checkbox-group">
+                            <label for="topic-checkbox2">
+                                <div class="choice-text">
+                                    <span>IT</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="topic-choice">
+                            <input type="checkbox" id="topic-checkbox3" name="Art" class="topic-checkbox-group">
+                            <label for="topic-checkbox3">
+                                <div class="choice-text">
+                                    <span>Art</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="topic-choice">
+                            <input type="checkbox" id="topic-checkbox4" name="Maths" class="topic-checkbox-group">
+                            <label for="topic-checkbox4">
+                                <div class="choice-text">
+                                    <span>Maths</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="topic-choice">
+                            <input type="checkbox" id="topic-checkbox5" name="Science" class="topic-checkbox-group">
+                            <label for="topic-checkbox5">
+                                <div class="choice-text">
+                                    <span>Science</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center gap-4">
+                        <button type="button" class="cancel-btn" id="closeEditTopicModal"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="submit-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" class="edit-topic" data-bs-toggle="modal" data-bs-target="#edit-topic" />

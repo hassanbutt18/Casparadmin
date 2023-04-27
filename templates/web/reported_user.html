@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% extends './layouts/base.html' %}
+    {% load static %}
+
+    {% block links %}
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/reported_user.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/block_user_modal.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/alert_user_modal.css' %}">
+    {% endblock %}
+
+    <title>{% block title %}Admin Reported Users{% endblock %}</title>
+</head>
+
+<body>
+    {% block body %}
+    <div class="row1">
+        <h1>Reported Users</h1>
+        <form action="" class="search-user">
+            <input type="text" placeholder="Search by name/username">
+            <svg class="search-icon" width="16" height="18" viewBox="0 0 16 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.3527 0.875C12.4835 0.875 15.8304 4.1909 15.8304 8.26867C15.8304 10.3733 14.9388 12.275 13.5081 13.6226L15.6331 15.7279C15.9597 16.0515 15.955 16.5716 15.6225 16.8895C15.2901 17.2075 14.7557 17.2029 14.4291 16.8793L12.1609 14.632C11.0456 15.2864 9.74356 15.6623 8.3527 15.6623C4.22195 15.6623 0.875 12.3464 0.875 8.26867C0.875 4.1909 4.22195 0.875 8.3527 0.875ZM8.3527 2.51782C5.16085 2.51782 2.56281 5.09176 2.56281 8.26867C2.56281 11.4456 5.16085 14.0195 8.3527 14.0195C11.5446 14.0195 14.1426 11.4456 14.1426 8.26867C14.1426 5.09176 11.5446 2.51782 8.3527 2.51782Z"
+                    fill="#8A8CA9" />
+            </svg>
+        </form>
+        <div class="sort-by-container">
+            <div class="sort-by-header">
+                <span>Sort by</span>
+                <svg class="chevron-down" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.247682 1.95256L6.12003 8.65877C6.48386 9.07427 7.11564 9.11615 7.53114 8.75232C7.94664 8.38848 7.98853 7.7567 7.62469 7.3412L1.75235 0.634987C1.38851 0.219486 0.75673 0.177604 0.341229 0.541441C-0.0742723 0.905277 -0.116155 1.53705 0.247682 1.95256Z"
+                        fill="#05ACBC" />
+                    <path
+                        d="M12.1232 0.627223L6.1269 7.33344C5.75877 7.74514 5.7941 8.37732 6.20581 8.74545C6.61752 9.11357 7.24969 9.07824 7.61782 8.66654L13.6141 1.96032C13.9823 1.54861 13.9469 0.916436 13.5352 0.548311C13.1235 0.180186 12.4913 0.215516 12.1232 0.627223Z"
+                        fill="#05ACBC" />
+                </svg>
+                <svg class="chevron-up hide" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.7523 7.04744L7.87997 0.341229C7.51614 -0.0742723 6.88436 -0.116155 6.46886 0.247682C6.05336 0.611518 6.01147 1.2433 6.37531 1.6588L12.2477 8.36501C12.6115 8.78051 13.2433 8.8224 13.6588 8.45856C14.0743 8.09472 14.1162 7.46295 13.7523 7.04744Z"
+                        fill="#05ACBC" />
+                    <path
+                        d="M1.87679 8.37278L7.8731 1.66656C8.24123 1.25486 8.2059 0.622677 7.79419 0.254552C7.38248 -0.113573 6.75031 -0.0782424 6.38218 0.333464L0.385864 7.03968C0.0177392 7.45139 0.053069 8.08356 0.464776 8.45169C0.876483 8.81981 1.50866 8.78448 1.87679 8.37278Z"
+                        fill="#05ACBC" />
+                </svg>
+            </div>
+            <div class="sort-by-dropdown-container hide">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                    <label class="form-check-label" for="flexCheckDefault1">
+                        A-Z
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        Last Seen
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                    <label class="form-check-label" for="flexCheckDefault3">
+                        Last Register
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reported-user-container">
+        <div class="reported-user-table-wrapper">
+            <table class="reported-user-table">
+                <thead>
+                    <th>Names</th>
+                    <th>Number of Reported Users</th>
+                </thead>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#block-user-modal">
+                    <td>
+                        <div class="user-details">
+                            <img src="{% static 'web/Assets/Images/user.svg' %}" alt="">
+                            <span>Alex Jones</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reported-count">
+                            81
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="pagination-container">
+            <div class="double-left">
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4684_7891)">
+                        <path d="M14.0625 14.9678L8.4375 9.34277L14.0625 3.71777" stroke="#8A8CA9" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.4375 14.9678L2.8125 9.34277L8.4375 3.71777" stroke="#8A8CA9" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4684_7891">
+                            <rect width="18" height="18" fill="white" transform="matrix(-1 0 0 -1 18 18.3428)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="single-left">
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.1307 1.61225C13.4236 1.90514 13.4236 2.38002 13.1307 2.67291L6.46105 9.34258L13.1307 16.0122C13.4236 16.3051 13.4236 16.78 13.1307 17.0729C12.8378 17.3658 12.363 17.3658 12.0701 17.0729L4.87006 9.87291C4.72941 9.73226 4.65039 9.54149 4.65039 9.34258C4.65039 9.14367 4.72941 8.9529 4.87006 8.81225L12.0701 1.61225C12.363 1.31935 12.8378 1.31935 13.1307 1.61225Z"
+                        fill="#8A8CA9" />
+                </svg>
+            </div>
+            <div class="current-page">1</div>
+            <div class="total-pages">/ 36</div>
+            <div class="single-right">
+                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.868108 0.612248C0.575214 0.905141 0.575214 1.38002 0.868108 1.67291L7.53778 8.34258L0.868108 15.0122C0.575214 15.3051 0.575214 15.78 0.868108 16.0729C1.161 16.3658 1.63587 16.3658 1.92877 16.0729L9.12877 8.87291C9.26942 8.73226 9.34844 8.54149 9.34844 8.34258C9.34844 8.14367 9.26942 7.9529 9.12877 7.81225L1.92877 0.612248C1.63587 0.319355 1.161 0.319355 0.868108 0.612248Z"
+                        fill="#8A8CA9" />
+                </svg>
+            </div>
+            <div class="double-right">
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4684_7919)">
+                        <path d="M3.9375 3.71777L9.5625 9.34277L3.9375 14.9678" stroke="#292941" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.5625 3.71777L15.1875 9.34277L9.5625 14.9678" stroke="#292941" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4684_7919">
+                            <rect width="18" height="18" fill="white" transform="translate(0 0.342773)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block User Modal -->
+    {% include './modals/block-user-modal.html' %}
+
+    <!-- Alert User Modal -->
+    {% include './modals/alert-user-modal.html' %}
+
+    {% endblock %}
+
+</body>
+{% block scripts %}
+<script src="{% static 'web/Assets/JS/reportedUser.js' %}"></script>
+{% endblock %}
+
+</html>

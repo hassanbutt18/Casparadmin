@@ -1,0 +1,40 @@
+<div class="modal fade" id="edit-gender" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="editGenderLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-end pb-0">
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center pt-0">
+                <h3>Edit Gender</h3>
+                <form action="" class="w-100" onsubmit="editGenderForm(event);">
+                    <div class="alert hide">
+                        <span class="closebtn" onclick="this.parentElement.classList.add('hide');">&times;</span>
+                        <span class="error-text"></span>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-body">
+                            <h4>Gender</h4>
+                            <span class="show-selected-gender"></span>
+                            <div class="gender-choice-container">
+                                <div class="gender-radio-btn">
+                                    <input id="female" type="radio" name="select_gender" value="Female" required />
+                                    <label for="female" class="radio-label">Female</label>
+                                </div>
+                                <div class="gender-radio-btn">
+                                    <input id="male" type="radio" name="select_gender" value="Male" required />
+                                    <label for="male" class="radio-label">Male</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center gap-4">
+                        <button type="button" class="cancel-btn" id="closeEditGenderModal"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="submit-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" class="edit-gender" data-bs-toggle="modal" data-bs-target="#edit-gender">

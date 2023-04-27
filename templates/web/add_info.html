@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% extends './layouts/base.html' %}
+    {% load static %}
+
+    {% block links %}
+
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/add_info.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/add_interest_modal.css' %}">
+    <link rel="stylesheet" href="{% static 'web/Assets/CSS/add_subject_modal.css' %}">
+
+    {% endblock %}
+    <title>{% block title %}Admin Add Profile Information{% endblock %}</title>
+</head>
+
+<body>
+    {% block body %}
+
+    <h1>Add Profile Information</h1>
+    <div class="add-interest-container">
+        <div class="interest-container-header">
+            <h2>Add Interest</h2>
+            <svg data-bs-toggle="modal" data-bs-target="#add-interest" width="35" height="35" viewBox="0 0 35 35"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.5002 10.208C16.9249 10.208 16.4585 10.6744 16.4585 11.2497V16.458H11.2502C10.6749 16.458 10.2085 16.9244 10.2085 17.4997C10.2085 18.075 10.6749 18.5413 11.2502 18.5413H16.4585V23.7497C16.4585 24.325 16.9249 24.7913 17.5002 24.7913C18.0755 24.7913 18.5418 24.325 18.5418 23.7497V18.5413H23.7502C24.3255 18.5413 24.7918 18.075 24.7918 17.4997C24.7918 16.9244 24.3255 16.458 23.7502 16.458H18.5418V11.2497C18.5418 10.6744 18.0755 10.208 17.5002 10.208Z"
+                    fill="white" />
+            </svg>
+        </div>
+        <div class="add-interest-card-container">
+
+        </div>
+    </div>
+    <div class="add-topic-container">
+        <div class="topic-container-header">
+            <h2>Add topic</h2>
+            <svg data-bs-toggle="modal" data-bs-target="#add-subject" width="35" height="35" viewBox="0 0 35 35"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.5002 10.208C16.9249 10.208 16.4585 10.6744 16.4585 11.2497V16.458H11.2502C10.6749 16.458 10.2085 16.9244 10.2085 17.4997C10.2085 18.075 10.6749 18.5413 11.2502 18.5413H16.4585V23.7497C16.4585 24.325 16.9249 24.7913 17.5002 24.7913C18.0755 24.7913 18.5418 24.325 18.5418 23.7497V18.5413H23.7502C24.3255 18.5413 24.7918 18.075 24.7918 17.4997C24.7918 16.9244 24.3255 16.458 23.7502 16.458H18.5418V11.2497C18.5418 10.6744 18.0755 10.208 17.5002 10.208Z"
+                    fill="white" />
+            </svg>
+        </div>
+        <div class="add-topic-card-container">
+
+        </div>
+    </div>
+    <button class="save-topic-interest-btn">Save Changes</button>
+
+
+    <!-- Add Interest Modal -->
+    {% include './modals/add-interest-modal.html' %}
+
+    <!-- Add Topic Modal -->
+    {% include './modals/add-topic-modal.html' %}
+
+    {% endblock %}
+    
+</body>
+{% block scripts %}
+
+<script src="{% static 'web/Assets/JS/addinfo.js' %}"></script>
+
+{% endblock %}
+</html>
