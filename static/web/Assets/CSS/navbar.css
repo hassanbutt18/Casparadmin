@@ -66,12 +66,15 @@ nav>a:first-of-type {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 14%;
-    aspect-ratio: 1 / .15;
-    min-width: 183px;
-    gap: 25px;
-    min-height: 50px;
-    padding: .25% 0;
+    margin-right: 1.5%;
+    /* min-width: 183px; */
+    gap: 15px;
+    /* min-height: 50px; */
+    /* padding: .25% 0; */
+}
+
+.nav-links > a {
+    text-decoration: none;
 }
 
 .nav-item a {
@@ -88,12 +91,12 @@ nav>a:first-of-type {
     text-decoration: underline!important;
 } */
 
+
 .nav-profile-image {
     position: relative;
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-right: 1.5%;
 }
 
 .nav-profile-image img {
@@ -107,6 +110,23 @@ nav>a:first-of-type {
     font-size: 1.125rem;
     line-height: 1.25rem;
     color: #292941;
+}
+
+.signout-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    height: 30px;
+    color: #292941;
+    width: 85px;
+}
+
+.signout-btn:hover {
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    color: #05ACBC;
 }
 
 /* .account-menu {

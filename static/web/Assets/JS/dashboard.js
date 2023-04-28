@@ -1,6 +1,6 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawLineChart);
-// google.charts.setOnLoadCallback(drawColumnChart);
+google.charts.setOnLoadCallback(drawColumnChart);
 
 function drawLineChart() {
   var data = google.visualization.arrayToDataTable([
@@ -40,27 +40,67 @@ function drawLineChart() {
 
   chart.draw(data, options);
 
-  var points = data.getNumberOfRows();
-  var max = 0;
-  var min = Number.MAX_VALUE;
-  var maxIndex, minIndex;
+  // var points = data.getNumberOfRows();
+  // var max = 0;
+  // var min = Number.MAX_VALUE;
+  // var maxIndex, minIndex;
 
-  for (var i = 0; i < points; i++) {
-    var value = data.getValue(i, 1);
-    if (value > max) {
-      max = value;
-      maxIndex = i;
-    }
-    if (value < min) {
-      min = value;
-      minIndex = i;
-    }
-  }
+  // for (var i = 0; i < points; i++) {
+  //   var value = data.getValue(i, 1);
+  //   if (value > max) {
+  //     max = value;
+  //     maxIndex = i;
+  //   }
+  //   if (value < min) {
+  //     min = value;
+  //     minIndex = i;
+  //   }
+  // }
 
-  console.log(max, maxIndex);
-  console.log(min, minIndex);
+  // console.log(max, maxIndex);
+  // console.log(min, minIndex);
 }
 
+function drawColumnChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Months", "Total Users", "Active Users", "Active Capsules"],
+    ["January", 1000, 400, 200],
+    ["February", 1170, 460, 250],
+    ["March", 660, 1120, 300],
+    ["April", 1030, 540, 350],
+    ["May", 330, 1540, 450],
+    ["June", 1130, 840, 750],
+  ]);
+
+  var options = {
+    // chart: {
+    //   title: "Company Performance",
+    //   subtitle: "Sales, Expenses, and Profit: 2014-2017",
+    // },
+    width: "100%",
+    height: "100%",
+    legend: "none",
+    chartArea: {
+      width: "80%",
+      height: "80%",
+    },
+    bars: "vertical",
+    hAxis: {
+      gridlines: { color: "#ECF0F4" },
+    },
+    vAxis: {
+      gridlines: { color: "#ECF0F4" },
+    },
+    height: 400,
+    colors: ["#05ACBC", "#83BA42", "#8A8CA9"],
+  };
+
+  var chart = new google.visualization.ColumnChart(
+    document.getElementById("chart2")
+  );
+
+  chart.draw(data, options);
+}
 
 // function drawColumnChart() {
 //   var data = google.visualization.arrayToDataTable([
@@ -150,61 +190,61 @@ function drawLineChart() {
 // });
 // chart1.render();
 
-var chart2 = new CanvasJS.Chart("chart2", {
-  animationEnabled: true,
-  // title:{
-  // 	text: "Olympic Medals of all Times (till 2016 Olympics)"
-  // },
-  // axisX: {
-  // 	title: "Medals",
-  // 	includeZero: true
-  // },
-  data: [
-    {
-      type: "column",
-      // showInLegend: true,
-      // name: "Gold",
-      color: "#05ACBC",
-      dataPoints: [
-        { label: "January", y: 236 },
-        { label: "February", y: 243 },
-        { label: "March", y: 273 },
-        { label: "April", y: 269 },
-        { label: "May", y: 196 },
-        { label: "June", y: 1118 },
-      ],
-    },
-    {
-      type: "column",
-      // showInLegend: true,
-      // name: "Silver",
-      color: "#83BA42",
-      dataPoints: [
-        { label: "January", y: 186 },
-        { label: "February", y: 272 },
-        { label: "March", y: 299 },
-        { label: "April", y: 270 },
-        { label: "May", y: 165 },
-        { label: "June", y: 896 },
-      ],
-    },
-    {
-      type: "column",
-      // showInLegend: true,
-      // name: "Bronze",
-      color: "#8A8CA9",
-      dataPoints: [
-        { label: "January", y: 172 },
-        { label: "February", y: 309 },
-        { label: "March", y: 302 },
-        { label: "April", y: 285 },
-        { label: "May", y: 188 },
-        { label: "June", y: 788 },
-      ],
-    },
-  ],
-});
-chart2.render();
+// var chart2 = new CanvasJS.Chart("chart2", {
+//   animationEnabled: true,
+//   // title:{
+//   // 	text: "Olympic Medals of all Times (till 2016 Olympics)"
+//   // },
+//   // axisX: {
+//   // 	title: "Medals",
+//   // 	includeZero: true
+//   // },
+//   data: [
+//     {
+//       type: "column",
+//       // showInLegend: true,
+//       // name: "Gold",
+//       color: "#05ACBC",
+//       dataPoints: [
+//         { label: "January", y: 236 },
+//         { label: "February", y: 243 },
+//         { label: "March", y: 273 },
+//         { label: "April", y: 269 },
+//         { label: "May", y: 196 },
+//         { label: "June", y: 1118 },
+//       ],
+//     },
+//     {
+//       type: "column",
+//       // showInLegend: true,
+//       // name: "Silver",
+//       color: "#83BA42",
+//       dataPoints: [
+//         { label: "January", y: 186 },
+//         { label: "February", y: 272 },
+//         { label: "March", y: 299 },
+//         { label: "April", y: 270 },
+//         { label: "May", y: 165 },
+//         { label: "June", y: 896 },
+//       ],
+//     },
+//     {
+//       type: "column",
+//       // showInLegend: true,
+//       // name: "Bronze",
+//       color: "#8A8CA9",
+//       dataPoints: [
+//         { label: "January", y: 172 },
+//         { label: "February", y: 309 },
+//         { label: "March", y: 302 },
+//         { label: "April", y: 285 },
+//         { label: "May", y: 188 },
+//         { label: "June", y: 788 },
+//       ],
+//     },
+//   ],
+// });
+// chart2.render();
 
 // function toolTipFormatter(e) {
 // 	var str = "";

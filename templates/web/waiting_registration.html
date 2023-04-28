@@ -12,7 +12,7 @@
     {% block links %}
 
     <link rel="stylesheet" href="{% static 'web/Assets/CSS/waiting_registration.css' %}">
-    <link rel="stylesheet" href="{% static 'web/Assets/CSS/edit_user.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'web/Assets/CSS/edit_registration_status_modal.css' %}"> -->
     <link rel="stylesheet" href="{% static 'web/Assets/CSS/del_user_modal.css' %}">
 
     {% endblock %}
@@ -100,13 +100,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -129,13 +129,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -158,13 +158,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -187,13 +187,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -216,13 +216,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -245,13 +245,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -274,13 +274,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -303,13 +303,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -332,13 +332,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -361,13 +361,13 @@
                         </div>
                     </td>
                     <td>
-                        <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
+                        <!-- <svg data-bs-toggle="modal" data-bs-target="#editUser" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#05ACBC" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.2002 15.2843C22.3523 15.4363 22.3523 15.6829 22.2002 15.835L14.1891 23.8422C13.8709 24.1645 13.4558 24.3735 13.0075 24.4373L10.6759 24.7868C10.6359 24.7928 10.5952 24.7928 10.5552 24.7868C10.3327 24.7535 10.1795 24.5461 10.2128 24.3237L10.5624 21.9921C10.6217 21.5469 10.8228 21.1326 11.1359 20.8106L19.1559 12.7906C19.3079 12.6385 19.5545 12.6385 19.7065 12.7906L22.2002 15.2843ZM21.4209 10.5212C21.8441 10.1036 22.5243 10.1036 22.9475 10.5212L24.4784 12.0521C24.896 12.4753 24.896 13.1555 24.4784 13.5787L23.9125 14.143C23.7604 14.2947 23.5141 14.2945 23.3622 14.1426L20.857 11.6374C20.7051 11.4855 20.7049 11.2392 20.8566 11.0871L21.4209 10.5212Z"
                                 fill="white" />
-                        </svg>
+                        </svg> -->
                         <svg data-bs-toggle="modal" data-bs-target="#del-user" width="35" height="35"
                             viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="35" rx="17.5" fill="#E31313" />
@@ -428,6 +428,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Edit Registration Modal -->
+    <!-- {% include './modals/edit-registration-status-modal.html' %} -->
 
     <!-- Delete User Modal -->
     {% include './modals/del-user-modal.html' %}

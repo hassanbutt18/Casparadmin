@@ -1,0 +1,82 @@
+#edit-status .modal-content {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#edit-status h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #292941;
+}
+
+#edit-status form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-status .input-container {
+    width: 365px;
+}
+
+#edit-status .input-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+#edit-status h4 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.2rem;
+    color: #292941;
+}
+
+#edit-status .input-body select {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(208, 209, 215, 0.5);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1rem;
+    margin-bottom: 30px;
+}
+
+#edit-status .input-body > select > option {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1rem;
+    color: #292941;
+}
+
+#edit-status .form-select {
+    background-image: url("../Images/dropdown_arrow.svg");
+}
+
+#edit-status .cancel-btn,
+#edit-status .submit-btn {
+    box-shadow: 0px 0px 10px #D0D1D7;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+#edit-status .cancel-btn {
+    background-color: #FF3B30;
+}
+
+#edit-status .submit-btn {
+    background-color: #05ACBC;
+}
